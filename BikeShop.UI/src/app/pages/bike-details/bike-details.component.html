@@ -1,0 +1,36 @@
+<div class="container mt-4 mb-4">
+  <div *ngIf="loading" class="text-center">
+    <p>Loading bike details...</p>
+  </div>
+
+  <div *ngIf="!loading && !bike" class="alert alert-danger">
+    <p>Bike not found.</p>
+  </div>
+
+  <div *ngIf="!loading && bike" class="card p-4 mx-auto" style="max-width: 800px;">
+    <div class="row g-0">
+      <div class="col-md-6 text-center">
+        <img [src]="bike.img_url" class="img-fluid rounded-start mt-4" alt="{{ bike.model }}">
+      </div>
+      <div class="col-md-6">
+        <div class="card-body">
+          <h2 class="card-title">{{ bike.manufacturer }} - {{ bike.model }}</h2>
+          <h4 class="text-primary mb-4">{{ bike.price }}</h4>
+          
+          <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item"><strong>Category:</strong> {{ bike.category }}</li>
+            <li class="list-group-item"><strong>Colour:</strong> {{ bike.colour }}</li>
+            <li class="list-group-item"><strong>Weight:</strong> {{ bike.weight }}</li>
+            <li class="list-group-item"><strong>Ref ID:</strong> <small class="text-muted">{{ bike.ref }}</small></li>
+          </ul>
+
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-outline-secondary" routerLink="/home">Back to List</button>
+            <button *ngIf="!bike.inFavourites" class="btn btn-orange" (click)="toggleFavourite()">Add to Favourites</button>
+            <button *ngIf="bike.inFavourites" class="btn btn-danger" (click)="toggleFavourite()">Remove from Favourites</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

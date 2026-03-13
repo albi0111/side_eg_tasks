@@ -1,0 +1,10 @@
+$white: #FFFFFF;
+$blue: #003883;
+
+.navbar {
+    background-color: $blue;
+    .navbar-brand,
+    .nav-item {
+        color: $white;
+    }
+}

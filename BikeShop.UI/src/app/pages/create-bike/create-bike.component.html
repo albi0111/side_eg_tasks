@@ -1,0 +1,47 @@
+<div class="container mt-4 mb-4">
+  <h2>Add a New Bike</h2>
+  <div class="card p-4">
+    <form (ngSubmit)="onSubmit()" #bikeForm="ngForm">
+      <div class="form-group mb-3">
+        <label for="manufacturer">Manufacturer</label>
+        <input type="text" class="form-control" id="manufacturer" required [(ngModel)]="bike.manufacturer" name="manufacturer">
+      </div>
+      <div class="form-group mb-3">
+        <label for="model">Model</label>
+        <input type="text" class="form-control" id="model" required [(ngModel)]="bike.model" name="model">
+      </div>
+      <div class="form-group mb-3">
+        <label for="category">Category</label>
+        <select class="form-control" id="category" [(ngModel)]="bike.category" name="category">
+          <option value="Mountain Bike">Mountain Bike</option>
+          <option value="Road Bike">Road Bike</option>
+          <option value="Hybrid Electric Bike">Hybrid Electric Bike</option>
+          <option value="BMX Bike">BMX Bike</option>
+        </select>
+      </div>
+      <div class="form-group mb-3">
+        <label for="price">Price (e.g. €500.00)</label>
+        <input type="text" class="form-control" id="price" required [(ngModel)]="bike.price" name="price">
+      </div>
+      <div class="form-group mb-3">
+        <label for="colour">Colour</label>
+        <input type="text" class="form-control" id="colour" required [(ngModel)]="bike.colour" name="colour">
+      </div>
+      <div class="form-group mb-3">
+        <label for="weight">Weight (e.g. 15kg)</label>
+        <input type="text" class="form-control" id="weight" required [(ngModel)]="bike.weight" name="weight">
+      </div>
+      
+      <div class="form-group mb-3">
+        <label for="imageUpload">Bike Image (Upload)</label>
+        <input type="file" class="form-control" id="imageUpload" (change)="onFileSelected($event)" accept="image/*">
+        <div *ngIf="bike.img_url" class="mt-2 text-center">
+          <img [src]="bike.img_url" alt="Image Preview" class="img-thumbnail" style="max-height: 200px; object-fit: contain;">
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary" [disabled]="!bikeForm.form.valid">Create Bike</button>
+      <button type="button" class="btn btn-secondary ms-2" routerLink="/home">Cancel</button>
+    </form>
+  </div>
+</div>

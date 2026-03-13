@@ -1,0 +1,40 @@
+<div class="container mt-3 mt-md-5">
+  <div class="jumbotron mb-3">
+    <h3>My Favourite Bikes</h3>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let bike of favouriteBikes" class="col-lg-4 col-md-6 col-sm-6">
+      <div class="card card-stats">
+        <div class="card-body pt-0">
+          <div class="row">
+            <div class="col-12 p-0 text-center">
+              <img src="{{bike.img_url}}" alt="{{bike.manufacturer}} {{bike.model}}"/>
+            </div>
+            <div class="col-12 my-3">
+              <div class="numbers">
+                <h4 class="mb-2 text-truncate">{{bike.manufacturer}} {{bike.model}}</h4>
+                <p class="mb-0"><b>Manufacturer:</b> {{bike.manufacturer}}</p>
+                <p class="mb-0"><b>Model:</b> {{bike.model}}</p>
+                <p class="mb-0"><b>Category:</b> {{bike.category}}</p>
+                <p class="mb-0"><b>Colour:</b> {{bike.colour}}</p>
+                <p class="mb-0"><b>Weight:</b> {{bike.weight}}</p>
+                <p class="mb-0"><b>Price:</b> {{bike.price}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-danger" (click)="removeFromFavourites(bike.ref)">
+            Remove from favourites
+          </button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!favouriteBikes.length" class="row">
+      <div class="col-12 pl-5">
+        <p>No favourites saved yet</p>
+      </div>
+    </div>
+  </div>
+</div>
