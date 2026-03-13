@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BikeShop.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad545b661b79da4987c7c93184f3e78d6355548e")]
 [assembly: System.Reflection.AssemblyProductAttribute("BikeShop.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BikeShop.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

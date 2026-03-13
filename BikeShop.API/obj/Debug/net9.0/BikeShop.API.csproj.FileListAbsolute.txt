@@ -143,3 +143,4 @@
 /home/albin/test/bike/side task/Eurofins Coding Challenge-2/Eurofins Coding Challenge-2/BikeShop.API/obj/Debug/net9.0/BikeShop.API.pdb
 /home/albin/test/bike/side task/Eurofins Coding Challenge-2/Eurofins Coding Challenge-2/BikeShop.API/obj/Debug/net9.0/BikeShop.API.genruntimeconfig.cache
 /home/albin/test/bike/side task/Eurofins Coding Challenge-2/Eurofins Coding Challenge-2/BikeShop.API/obj/Debug/net9.0/ref/BikeShop.API.dll
+/home/albin/test/bike/side task/Eurofins Coding Challenge-2/Eurofins Coding Challenge-2/BikeShop.API/obj/Debug/net9.0/BikeShop.API.sourcelink.json
